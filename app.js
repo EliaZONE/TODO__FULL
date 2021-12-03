@@ -25,6 +25,7 @@ function addTask() {
     input.className = 'input__checkbox'
     input.type = 'checkbox'
     button.className = 'button_close'
+    button.type = 'button'
 
     if (TASK__HIGH.value) {
         label.textContent = TASK__HIGH.value

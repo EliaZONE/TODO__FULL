@@ -86,21 +86,18 @@ header, footer {
 .input-todo {
   position: relative;
   background: #FFF;
+  border-radius: 6px;
+  border: 1px solid #989898;
+  margin-bottom: 8px;
 }
 .text__input-body {
   padding: 12px 45px;
-  border: 1px solid #989898;
   box-sizing: border-box;
-  border-radius: 6px;
   font-size: 18px;
   line-height: 21px;
   color: #202020;
   text-align: left;
   display: block;
-  margin-bottom: 8px;
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 .checked__back {
   background: #F4F4F4;
