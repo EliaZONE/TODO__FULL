@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>JavaScript</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">TO DO LIST</header>
+        <main class="main">
+            <div class="container">
+                <div class="high">
+                    <div class="high__body">
+                        <div class="high__title">HIGH</div>
+                        <form class="form__input">
+                            <input id="high" class="input__text" type="text" placeholder="Добавить важных дел">
+                            <input value="" type="submit" class="button__add"/>
+                        </form>
+                        <div class="input-todo">
+                            <label class="text__input-body">
+                                Вот вам и супер интересная тема. Вы наверняка заметили что ваши файлы с кодом становятся все объемнее, что хочется вынести некоторые вещи куда-то за пределы основной программы.
+                            </label>
+                            <input class="input__checkbox" type="checkbox">
+                            <button class="button_close"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="low">
+                    <div class="low__body">
+                        <div class="low__title">LOW</div>
+                        <form class="form__input">
+                            <input id="low" class="input__text" type="text" placeholder="Добавить">
+                            <input value="" type="submit" class="button__add"/>
+                        </form>
+                        <div class="input-todo">
+                            <label class="text__input-body">
+                                Посмотреть ютубчик.
+                            </label>
+                            <input class="input__checkbox" type="checkbox">
+                            <button class="button_close"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">NEFEDOV_IT</footer>
+    </div>
+<script type="module" src="app.js"></script>
+<script type="module" src="view.js"></script>
+</body>
+</html>
