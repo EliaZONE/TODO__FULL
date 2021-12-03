@@ -1,4 +1,4 @@
-import {BUTTONS_ADD, DELETE, CHECKBOX, LISTS} from './view.js'
+import {BUTTONS_ADD, DELETE, CHECKBOXES, LISTS} from './view.js'
 
 for (const add of BUTTONS_ADD) {
     add.addEventListener('click', addTask)
@@ -8,15 +8,15 @@ for (const add of BUTTONS_ADD) {
 }
 
 function addTask() {
-    let TASK__HIGH = document.getElementById('high')
-    let TASK__LOW = document.getElementById('low')
+    const TASK_HIGH = document.getElementById('high')
+    const TASK_LOW = document.getElementById('low')
 
-    let div = document.createElement('div')
-    let label = document.createElement('label')
-    let input = document.createElement('input')
-    let button = document.createElement('input')
+    const div = document.createElement('div')
+    const label = document.createElement('label')
+    const input = document.createElement('input')
+    const button = document.createElement('input')
 
-    if (TASK__HIGH.value === '' && TASK__LOW.value === '') {
+    if (TASK_HIGH.value === '' && TASK_LOW.value === '') {
         return alert('Введите задачу')
     }
 
@@ -27,13 +27,13 @@ function addTask() {
     button.className = 'button_close'
     button.type = 'button'
 
-    if (TASK__HIGH.value) {
-        label.textContent = TASK__HIGH.value
-        TASK__HIGH.value = ''
+    if (TASK_HIGH.value) {
+        label.textContent = TASK_HIGH.value
+        TASK_HIGH.value = ''
     }
-    if (TASK__LOW.value) {
-        label.textContent = TASK__LOW.value
-        TASK__LOW.value = ''
+    if (TASK_LOW.value) {
+        label.textContent = TASK_LOW.value
+        TASK_LOW.value = ''
     }
 
     for (const list of LISTS) {
@@ -45,23 +45,23 @@ function addTask() {
 
     const DELETE = document.querySelectorAll('.button_close')
 
-    for (const button of DELETE) {
-        button.addEventListener('click', deleteTask)
+    for (const deleted of DELETE) {
+        deleted.addEventListener('click', deleteTask)
     }
 
-    const CHECKBOX = document.querySelectorAll('.input__checkbox')
+    const CHECKBOXES = document.querySelectorAll('.input__checkbox')
 
-    for (const check of CHECKBOX) {
-        check.addEventListener('click', taskDone)
+    for (const checkbox of CHECKBOXES) {
+        checkbox.addEventListener('click', taskDone)
     }
 }
 
-for (const button of DELETE) {
-    button.addEventListener('click', deleteTask)
+for (const deleted of DELETE) {
+    deleted.addEventListener('click', deleteTask)
 }
 
-for (const check of CHECKBOX) {
-    check.addEventListener('click', taskDone)
+for (const checkbox of CHECKBOXES) {
+    checkbox.addEventListener('click', taskDone)
 }
 
 function deleteTask() {
