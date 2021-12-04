@@ -80,8 +80,11 @@ header, footer {
   position: absolute;
   top: 11px;
   right: 10px;
-  transition: 0.3s;
+  transition: 0.5s;
   cursor: pointer;
+  &:hover {
+    transform: rotate(180deg);
+  }
 }
 .input-todo {
   position: relative;
@@ -98,6 +101,7 @@ header, footer {
   color: #202020;
   text-align: left;
   display: block;
+  word-wrap: break-word;
 }
 .checked__back {
   background: #F4F4F4;
@@ -131,6 +135,10 @@ header, footer {
 }
 .low__title {
   margin: 12px 0;
+}
+.error {
+  border: 1px solid #ff0000;
+  box-shadow: 0 0 7px #ff0000;
 }
 
 
