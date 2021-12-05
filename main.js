@@ -1,12 +1,12 @@
-import {BUTTONS_ADD, DELETE, CHECKBOXES, TASKS, FORMS} from './view.js'
+import {UI_ELEMENTS} from './view.js'
 
-BUTTONS_ADD.forEach(function(item, i) {
+UI_ELEMENTS.BUTTONS_ADD.forEach(function(item, i) {
     item.addEventListener('click', function (e) {
         e.preventDefault()
     })
 
     item.addEventListener('click', function () {
-        const task = TASKS[i]
+        const task = UI_ELEMENTS.TASKS[i]
         const createDiv = document.createElement('div')
         const createLabel = document.createElement('label')
         const createInput = document.createElement('input')
@@ -14,14 +14,14 @@ BUTTONS_ADD.forEach(function(item, i) {
         const isNotEmptyTask = task.value.trim()
 
         if (!isNotEmptyTask) {
-            resetForm(FORMS)
+            resetForm(UI_ELEMENTS.FORMS)
             return task.classList.add('error')
         }
 
         createDiv.className = 'input-todo'
         createLabel.className = 'text__input-body'
         createLabel.textContent = task.value
-        resetForm(FORMS)
+        resetForm(UI_ELEMENTS.FORMS)
         createInput.className = 'input__checkbox'
         createInput.type = 'checkbox'
         createInput.addEventListener('click', changeStatus)
@@ -41,11 +41,11 @@ function resetForm(forms) {
     forms.forEach(item => item.reset())
 }
 
-for (const deleted of DELETE) {
+for (const deleted of UI_ELEMENTS.DELETE) {
     deleted.addEventListener('click', deleteTask)
 }
 
-for (const checkbox of CHECKBOXES) {
+for (const checkbox of UI_ELEMENTS.CHECKBOXES) {
     checkbox.addEventListener('click', changeStatus)
 }
 

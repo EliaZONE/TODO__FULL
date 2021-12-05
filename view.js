@@ -1,5 +1,9 @@
-export const BUTTONS_ADD = document.querySelectorAll('.button__add')
-export const DELETE = document.querySelectorAll('.button_close')
-export const CHECKBOXES = document.querySelectorAll('.input__checkbox')
-export const TASKS = document.getElementsByClassName('input__text')
-export const FORMS = document.querySelectorAll('.form__input')
+export const UI_ELEMENTS = {
+    BUTTONS_ADD: document.querySelectorAll('.button__add'),
+    DELETE: document.querySelectorAll('.button_close'),
+    CHECKBOXES: document.querySelectorAll('.input__checkbox'),
+    TASKS: document.getElementsByClassName('input__text'),
+    FORMS: document.querySelectorAll('.form__input')
+}
+
+
